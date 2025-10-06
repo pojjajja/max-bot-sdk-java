@@ -48,7 +48,7 @@ public class WebhookBotTest {
     public void setUp() throws Exception {
         when(client.newCall(isA(SubscribeQuery.class))).thenReturn(CompletableFuture.completedFuture(null));
 
-        container = spy(new JettyWebhookBotContainer("0.0.0.0", 12345));
+        container = spy(new JettyWebhookBotContainer("0.0.0.0", 56533));
         bot = new TestBot(client, "testbot");
         bot2 = new TestBot(client, "testbot2");
         httpClient = new OkHttpTransportClient();
